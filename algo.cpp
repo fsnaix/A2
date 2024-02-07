@@ -137,24 +137,24 @@ void DeleteIntMap(int** arr, int height) {
 
 
 
-/* Sleep function that can run on both window and ubuntu */
+/* Sleep function that can run on both window and unix */
 void MySleep(int amount) {
 	#ifdef WIN32
 	Sleep(amount * 1000);
 	#define window
 	#else
 	sleep(amount);
-	#define ubuntu
+	#define unix
 	#endif
 }
 
-/* Clear screen function that can run on both window and ubuntu */
+/* Clear screen function that can run on both window and unix */
 void ClearScreen() {
 	#ifdef WIN32
 	system("cls");
 	#define window
 	#else
 	system("clear");
-	#define ubuntu
+	#define unix
 	#endif
 }
